@@ -104,16 +104,22 @@ function checaIgualdadeDesconsiderandoCase(string1, string2) {
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
+  let anoAtual = prompt("Qual o ano atual?")
+  const anoNascimento = prompt("Qual o ano do seu nascimento?")
+  const anoEmicaoIdentidade = prompt("Qual o ano de emissão da sua identidade?")
 
 }
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
-  // implemente sua lógica aqui
+  let anoBissexto
 
 }
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
-  // implemente sua lógica aqui
-
+  let maiorIdade = prompt("Você tem mais de 18 anos?")
+  let escolaridade = prompt("Você possui ensino médio completo?")
+  let disponibilidade = prompt("Você possui disponibilidade exclusiva durante os horários do curso?")
+  let inscricaoValida = maiorIdade == "sim" && escolaridade == "sim" && disponibilidade == "sim"
+  console.log(inscricaoValida)
 }
