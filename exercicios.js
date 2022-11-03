@@ -107,11 +107,25 @@ function checaRenovacaoRG() {
   let anoAtual = prompt("Qual o ano atual?")
   const anoNascimento = prompt("Qual o ano do seu nascimento?")
   const anoEmicaoIdentidade = prompt("Qual o ano de emissão da sua identidade?")
+  let idade = anoAtual - anoNascimento
+  let tempoIdentidade = anoAtual - anoEmicaoIdentidade
 
+  const condicaoAteVinte = idade <= 20 && tempoIdentidade >= 5
+  const condicaoAteCinquenta = idade >20 && idade <= 50 && tempoIdentidade >=10
+  const condicaoMaiorCinquenta = idade > 50 && tempoIdentidade >= 15
+
+  const renovarIdentidade =condicaoAteVinte || condicaoAteCinquenta || condicaoMaiorCinquenta
+
+  console.log(renovarIdentidade)
 }
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
-  let anoBissexto
+  const condicaoAno1 = ano % 400 === 0
+  const condicaoAno2 = ano % 4 === 0
+  const condicaoAno3 = ano % 100 !== 0
+
+  const anoBissexto = condicaoAno1 || condicaoAno2 && condicaoAno3
+  return anoBissexto
 
 }
 
